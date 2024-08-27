@@ -81,7 +81,7 @@ height: 5vh;
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .logo img {  
-    height: 81px;
+    height: 100%;
     width: 126px;}
 }
 

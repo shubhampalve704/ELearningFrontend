@@ -14,12 +14,15 @@ const CourseCard = ({ course }) => {
   const { fetchCourses } = CourseData();
 
   const deleteHandler = async (id) => {
+   
     if (confirm("Are you sure you want to delete this course")) {
       try {
+        
         const { data } = await axios.delete(`${server}/api/course/${id}`, {
           headers: {
             token: localStorage.getItem("token"),
           },
+
         });
 
         toast.success(data.message);
