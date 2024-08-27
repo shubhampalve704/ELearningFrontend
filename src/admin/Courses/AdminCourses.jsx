@@ -10,6 +10,7 @@ import { server } from "../../main";
 
 const categories = [
   "Web Development",
+  "DSA",
   "App Development",
   "Game Development",
   "Data Science",
@@ -78,6 +79,7 @@ const AdminCourses = ({ user }) => {
       setPrice("");
       setCategory("");
     } catch (error) {
+      setBtnLoading(false);
       toast.error(error.response.data.message);
     }
   };
